@@ -1,0 +1,40 @@
+[project]
+name = "dao-governance"
+authors = []
+description = "DAO Governance Token implementation on Stacks"
+telemetry = false
+requirements = []
+boot_contracts = []
+
+[contracts.sip-010-trait]
+path = "contracts/sip-010-trait.clar"
+clarity_version = 2
+epoch = 2.4
+
+[contracts.governance-token]
+path = "contracts/governance-token.clar"
+clarity_version = 2
+epoch = 2.4
+
+[contracts.proposal-manager]
+path = "contracts/proposal-manager.clar"
+clarity_version = 2
+epoch = 2.4
+
+[contracts.vote-counter]
+path = "contracts/vote-counter.clar"
+clarity_version = 2
+epoch = 2.4
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = true
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
